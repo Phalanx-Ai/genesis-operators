@@ -2,18 +2,38 @@
   "type": "object",
   "title": "extractor configuration",
   "required": [
-    "print_hello"
+    "client_id",
+    "#password",
+    "cloud_url"
   ],
   "properties": {
-    "print_hello": {
-      "type": "boolean",
-      "title": "Print Hello",
+    "client_id": {
+      "type": "string",
+      "title": "Client ID",
       "propertyOrder": 1
     },
-    "debug": {
-      "type": "boolean",
-      "title": "Debug",
+    "#password": {
+      "type": "string",
+      "format": "password",
+      "title": "Password",
       "propertyOrder": 2
+    },
+    "cloud_url": {
+      "type": "string",
+      "title": "URL of cloud server",
+      "propertyOrder": 3
+    },
+    "last_days_interval": {
+      "type": "string",
+      "title": "Get info from last X days",
+      "propertyOrder": 4,
+      "default": "3"
+    },
+    "start_date": {
+      "type": "string",
+      "title": "debug - Start from different day",
+      "propertyOrder": 5,
+      "default" : ""
     }
   }
 }
