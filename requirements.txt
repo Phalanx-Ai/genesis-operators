@@ -1,0 +1,7 @@
+keboola.component==1.3.5
+# various util methods, e.g. relative date generation ('1 day ago'=> date)
+keboola.utils
+# Convenient library providing base for HTTP clients
+# keboola.http-client
+mock
+freezegun
