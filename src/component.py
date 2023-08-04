@@ -160,14 +160,6 @@ class Component(ComponentBase):
                 login_details[detail][record] = str(login_details[detail][record])
 
         # export to CSV (email; name; date; datetime) with PK (email; date)
-        with open('data_file.csv', 'w') as data_file:
-            csv_writer = csv.writer(data_file)
-
-            csv_writer.writerow(["email", "name", "date", "first_login"])
-            for user in login_details:
-                for date in login_details[user]:
-                    csv_writer.writerow([user, names[user], date, login_details[user][date]])
-
         logging.info("Save table")
         logging.info("Memory usage BRK-SAVE> %s" % str(psutil.Process().memory_info().rss))
         conversation_table = self.create_out_table_definition(
