@@ -8,6 +8,7 @@ services:
         - ./data:/data
     environment:
       - KBC_DATADIR=./data
+    mem_limit: 256m
   test:
     # Use to run flake8 and unittests checks
     build: .
